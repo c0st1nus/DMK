@@ -1,5 +1,6 @@
-:root{
-    --font-size: 16px; /* font-size: var(--font-size) */
+:root {
+    --font-size: 16px;
+    /* font-size: var(--font-size) */
     --trns: all 0.2s;
     --fcol: #1b78c4;
 }
@@ -8,19 +9,21 @@ html {
     width: 100%;
     height: 100%;
 }
+
 body {
     margin: 0;
     padding: 0;
     display: grid;
-    grid: 7% auto / 20% auto 20%;
+    grid: 7% auto 20% / 20% auto 20%;
     width: 100%;
     height: 100%;
 }
+
 nav {
-    grid-column:span 3;
+    grid-column: span 3;
     grid-row: 1;
     border-bottom: 1px solid black;
-    height:7%;
+    height: 7%;
     min-height: 50px;
     width: 100%;
     position: fixed;
@@ -29,21 +32,25 @@ nav {
     align-content: center;
     background-color: white;
 }
+
 nav ul {
     display: flex;
     justify-content: space-between;
     width: 40%;
 }
+
 nav ul li a {
     text-decoration: none;
     color: black;
     transition: var(--trns);
     position: relative;
 }
+
 nav ul li:hover {
     transform: scale(1.2);
 }
-nav ul li a:after{
+
+nav ul li a:after {
     content: '';
     position: absolute;
     width: 100%;
@@ -55,6 +62,7 @@ nav ul li a:after{
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
+
 nav ul li a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
@@ -74,29 +82,115 @@ nav ul li a:hover:after {
     margin-right: auto;
     transition: var(--trns);
 }
+
 .links:hover {
     transform: scale(1.005);
 }
+
 .links a {
     width: 100%;
     height: 100%;
     text-decoration: none;
     color: black;
 }
+
 .title {
-    font-size:40px;
+    font-size: 40px;
     padding-top: 20px;
     padding-left: 15px;
 }
+
 .desc {
     padding-left: 15px;
 }
 
 .topics {
     display: grid;
-    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr ;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
     gap: 10px 20px;
 }
+
 .topic {
     color: var(--fcol);
+}
+
+.roadmap {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+    gap: 15px;
+}
+
+.roadmap .b1,
+.roadmap .b2 {
+    height: 80px;
+    width: 150px;
+    border: none;
+    border: 3px solid black;
+    background-color: white;
+    border-top: none;
+}
+
+.roadmap .b1 {
+    justify-self: end;
+    align-self: start;
+    border-right: none;
+    border-bottom-left-radius: 20px;
+}
+
+.roadmap .b2 {
+    justify-self: start;
+    align-self: start;
+    border-left: none;
+    border-bottom-right-radius: 20px;
+}
+
+.roadmap .b1:first-child {
+    width: 80px;
+    margin-right: 0;
+    border-top: 3px solid black;
+    border-top: 3px solid black;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+
+.roadmap .b1:last-child {
+    border-right: 3px solid black;
+    border-bottom-right-radius: 20px;
+    margin-right: 65px;
+    width: 90px;
+}
+
+.r1,
+.r2,
+.r1 use,
+.r2 use {
+    width: 150px;
+    height: 150px;
+    z-index: -1;
+}
+
+.r1 {
+    transform: rotate(90deg) scaleY(1.1);
+    justify-self: start;
+}
+
+.r2 {
+    width: 150px;
+    height: 150px;
+    justify-self: end;
+}
+
+footer {
+    grid-column: span 3;
+    grid-row: 3;
+    margin-top: 15px;
+    border-top: 1px solid black;
+}
+
+.fcontent {
+    display: grid;
+    grid-template: 1fr / repeat(4, 1fr);
+    height: auto;
+    margin: 15px 50px 15px 50px;
 }
