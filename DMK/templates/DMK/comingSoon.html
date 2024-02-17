@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавление элементов</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <form id="form">
+        <div class="item">
+            <p>Пункт 1</p>
+            <label for="text1">Текст:</label><br>
+            <textarea id="text1" name="text1"></textarea><br>
+        </div>
+    </form>
+    <button id="add">Добавить пункт</button>
+    <button type="submit" form="form" value="Submit">Отправить</button>
+
+    <script>
+        $(document).ready(function(){
+            var i = 2;
+            $("#add").click(function(){
+                $("#form").append('<div class="item"><p>Пункт ' + i + '</p><label for="text' + i + '">Текст:</label><br><textarea id="text' + i + '" name="text' + i + '"></textarea><br></div>');
+                i++;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -21,4 +21,9 @@ import DMK.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', DMK.views.home, name='home'),
+    path('test/', DMK.views.test, name='new_page'),
+    path('comingSoon/', DMK.views.comingSoon, name='ComingSoon'),
+    path('physics/', DMK.views.physics, name='Physics'),
+    path('constructor/', DMK.views.constructor, name='Constructor'),
+    path('add-item/', DMK.views.add_item, name='add_item'),
 ]

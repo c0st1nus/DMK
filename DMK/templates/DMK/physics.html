@@ -11,22 +11,20 @@
     <nav>
         <ul type="none">
             <li><a href="{% url 'home' %}">Главная</a></li>
-            <li><a href="physics.html">Физика</a></li>
-            <li><a href="chemestry.html">Химия</a></li>
-            <li><a href="biology.html">Биология</a></li>
-            <li><a href="math.html">Математика</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Физика</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Химия</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Биология</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Математика</a></li>
         </ul>
     </nav>
     <div class="container">
         <h1>Темы</h1>
         <div class="topics">
-            <a href="lessons/pl1.html" class="topic">11 A</a>
-            <a href="" class="topic">11 A</a>
-            <a href="" class="topic">11 A</a>
-            <a href="" class="topic">11 A</a>
-            <a href="" class="topic">11 A</a>
-            <a href="" class="topic">+ Добавить урок</a>
+            {% for lesson in lessons %}
+            <a href="{% url 'Physics' %}" class="topic" style="font-size: 1.5em">{{ lesson.description }}</a>
+            {% endfor %}
         </div>
+        <a href="{% url 'Constructor' %}" style="font-size: 2em; text-decoration: none; border: 2px solid deepskyblue; text-align: center; border-radius: 15px; padding: 5px;" class="topic">Добавить урок</a>
     </div>
     <footer>
         <div class="fcontent">
