@@ -191,6 +191,14 @@ footer {
 .fcontent {
     display: grid;
     grid-template: 1fr / repeat(4, 1fr);
-    height: auto;
-    margin: 15px 50px 15px 50px;
+    height: 100%;
+    padding: 0 50px;
+}
+
+.fcontent ul li:first-child {
+    font-weight: bolder;
+}
+
+.fcontent ul li a {
+    color: black;
 }
