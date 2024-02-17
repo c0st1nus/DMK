@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Химия</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <nav>
+        <ul type="none">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="physics.html">Физика</a></li>
+            <li><a href="chemestry.html">Химия</a></li>
+            <li><a href="biology.html">Биология</a></li>
+            <li><a href="math.html">Математика</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Темы</h1>
+        <div class="topics">
+            <a href="" class="topic">11 A</a>
+            <a href="" class="topic">11 A</a>
+            <a href="" class="topic">11 A</a>
+            <a href="" class="topic">11 A</a>
+            <a href="" class="topic">11 A</a>
+            <a href="" class="topic">+ Добавить урок</a>
+        </div>
+    </div>
+</body>
+</html>

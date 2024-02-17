@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <nav>
+        <ul type="none">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="physics.html">Физика</a></li>
+            <li><a href="chemestry.html">Химия</a></li>
+            <li><a href="biology.html">Биология</a></li>
+            <li><a href="math.html">Математика</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="links">
+            <a href="physics.html"><p class="title">Физика</p>
+            <p class="desc">Материалы для физики</p></a>
+        </div>
+        <div class="links">
+            <a href="chemestry.html"><p class="title">Химия</p>
+            <p class="desc">Материалы для химии</p></a>
+        </div>
+        <div class="links">
+            <a href="biology.html"><p class="title">Биология</p>
+            <p class="desc">Материалы для биологии</p></a>
+        </div>
+        <div class="links">
+            <a href="math.html"><p class="title">Математика</p>
+            <p class="desc">Материалы для математики</p></a>
+        </div>
+    </div>
+</body>
+</html>

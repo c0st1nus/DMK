@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дорожная карта Физика 1 урок</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <?xml version="1.0" encoding="iso-8859-1"?>
+    <g>
+		<path d="M0,45.465h1.286c0-23.179,20.781-42.036,46.324-42.036V2.144C21.356,2.144,0,21.577,0,45.465z"/>
+		<path d="M4.548,45.467h7.745c0-17.713,15.844-32.125,35.318-32.125V6.336C23.865,6.336,4.548,23.889,4.548,45.467z"/>
+		<path d="M12.936,45.467h8.368c0-13.181,11.802-23.903,26.306-23.903v-7.576C28.49,13.987,12.936,28.109,12.936,45.467z"/>
+		<path d="M24.951,45.467h1.287c0-10.677,9.588-19.362,21.373-19.362v-1.287C35.116,24.817,24.951,34.079,24.951,45.467z"/>
+	</g>
+</head>        
+<body>
+    <nav>
+        <ul type="none">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="../physics.html">Физика</a></li>
+            <li><a href="../chemestry.html">Химия</a></li>
+            <li><a href="../biology.html">Биология</a></li>
+            <li><a href="../math.html">Математика</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Урок 1: тема</h1>
+        <div class="roadmap"><button>Button</button></div>
+	    <svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 47.611 47.611" xml:space="preserve"></svg>
+    </div>
+</body>
+</html>
