@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавление элементов</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <form id="form">
+        <div class="item">
+            <label for="lesson_title">Название урока:</label><br>
+            <input type="text" id="lesson_title" name="lesson_title"><br>
+            <p>Шаг 1</p>
+            <label for="text1">Текст:</label><br>
+            <textarea id="text1" name="text1"></textarea><br>
+        </div>
+    </form>
+    <div id="buttons">
+        <button id="add">Добавить пункт</button>
+        <button type="submit" form="form" value="Submit">Отправить</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            var i = 2;
+            $("#add").click(function(){
+                $("#form").append('<div class="item"><p>Шаг ' + i + '</p><label for="text' + i + '">Текст:</label><br><textarea id="text' + i + '" name="text' + i + '"></textarea><br></div>');
+                i++;
+            });
+        });
+        $('form').on('submit', function(event){
+            console.log('Отправка формы');
+            event.preventDefault(); // Предотвращаем стандартное поведение формы
+            var formData = $(this).serialize(); // Сериализуем данные формы
+            $.ajax({
+                url: '/add-item/', // URL, на который вы отправляете запрос
+                type: 'POST',
+                data: formData,
+                headers: { 'X-CSRFToken': getCookie('csrftoken') }, // Add this line
+                success: function(response){
+                    // Обрабатываем ответ сервера
+                    console.log(response);
+                }
+            });
+        });
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+    </script>
+</body>
+</html>

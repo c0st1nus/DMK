@@ -42,12 +42,9 @@ def constructor(request):
 @csrf_exempt
 def add_item(request):
     if request.method == 'POST':
-        data = request.POST
-        lesson = Lesson.objects.get(id=1)
-        print("success")
-        for st in data:
-            newStep = Step(description=st)
-            newStep.lesson = lesson
-            newStep.save()
-
+        data = request.POST.copy()  # Create a mutable copy
+        lesson_title = data.pop('lesson_title')[0]  # Get the lesson title and remove it from data
+        lesson = Lesson.objects.create(subject="physics", description=lesson_title)  # Create a new Lesson with the title
+        for step_description in data.values():  # Now data only contains step descriptions
+            Step.objects.create(description=step_description, lesson=lesson, lesson_id=lesson.id)  # Create a new Step for each description, linked to the new Lesson
         return JsonResponse({'status': 'success', 'message': 'Item created successfully'})
