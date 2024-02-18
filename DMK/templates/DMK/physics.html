@@ -27,7 +27,7 @@
         <h1>Темы</h1>
         <div class="topics">
             {% for lesson in lessons %}
-            <a href="{% url 'Physics' %}" class="topic" style="font-size: 1.5em">{{ lesson.description }}</a>
+            <a href="{% url 'physics_detail' %}" class="topic" style="font-size: 1.5em">{{ lesson.description }}</a>
             {% endfor %}
         </div>
         <a href="{% url 'Constructor' %}" style="font-size: 2em; text-decoration: none; border: 2px solid deepskyblue; text-align: center; border-radius: 15px; padding: 5px;" class="topic">Добавить урок</a>

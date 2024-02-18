@@ -10,7 +10,7 @@ from DMK.models import Lesson, Step
 client = OpenAI(api_key='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')
 
 def home(request):
-    return render(request, 'DMK/home.html')
+    return render(request, 'DMK/index.html')
 
 def comingSoon(request):
     return render(request, 'DMK/comingSoon.html')
@@ -41,7 +41,7 @@ def constructor(request):
 def physics_detail(request, id):
     lesson = Lesson.objects.get(id=id)
     buttons = Step.objects.filter(lesson=lesson)
-    return render(request, 'DMK/pl1.html', {'buttons': buttons})
+    return render(request, 'DMK/pl1.html')
 
 @csrf_exempt
 def add_item(request):
