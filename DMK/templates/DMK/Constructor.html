@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,6 +32,7 @@
             console.log('Отправка формы');
             event.preventDefault(); // Предотвращаем стандартное поведение формы
             var formData = $(this).serialize(); // Сериализуем данные формы
+            window.open("../", "_self")
             $.ajax({
                 url: '/add-item/', // URL, на который вы отправляете запрос
                 type: 'POST',

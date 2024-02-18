@@ -11,28 +11,61 @@
     <nav>
         <ul type="none">
             <li><a href="{% url 'home' %}">Главная</a></li>
-            <li><a href="{% url 'Physics' %}">Физика</a></li>
-            <li><a href="{% url 'ComingSoon' %}">Химия</a></li>
-            <li><a href="{% url 'ComingSoon' %}">Биология</a></li>
-            <li><a href="{% url 'ComingSoon' %}">Математика</a></li>
+            <li><a href="{% url 'Physics' %}">Новости</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Конкурсы</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Школьникам</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Учителям</a></li>
+            <li><a href="{% url 'ComingSoon' %}">О нас</a></li>
         </ul>
+        <div class="progress">
+            <p class="name">Name</p>
+            <progress id="progress-bar" value="70" max="100"></progress>
+        </div>
     </nav>
     <div class="container">
         <div class="links">
             <a href="{% url 'Physics' %}"><p class="title">Физика</p>
             <p class="desc">Материалы для физики</p></a>
+            <span class="linkgr">
+                <a href="{% url 'Physics' %}">7 класс</a>
+                <a href="{% url 'Physics' %}">8 класс</a>
+                <a href="{% url 'Physics' %}">9 класс</a>
+                <a href="{% url 'Physics' %}">10 класс</a>
+                <a href="{% url 'Physics' %}" id="linklast">11 класс</a>
+            </span>
         </div>
         <div class="links">
             <a href="{% url 'ComingSoon' %}"><p class="title">Химия</p>
             <p class="desc">Материалы для химии</p></a>
+            <span class="linkgr">
+                <a href="{% url 'Physics' %}">7 класс</a>
+                <a href="{% url 'Physics' %}">8 класс</a>
+                <a href="{% url 'Physics' %}">9 класс</a>
+                <a href="{% url 'Physics' %}">10 класс</a>
+                <a href="{% url 'Physics' %}" id="linklast">11 класс</a>
+            </span>
         </div>
         <div class="links">
             <a href="{% url 'ComingSoon' %}"><p class="title">Биология</p>
             <p class="desc">Материалы для биологии</p></a>
+            <span class="linkgr">
+                <a href="{% url 'Physics' %}">7 класс</a>
+                <a href="{% url 'Physics' %}">8 класс</a>
+                <a href="{% url 'Physics' %}">9 класс</a>
+                <a href="{% url 'Physics' %}">10 класс</a>
+                <a href="{% url 'Physics' %}" id="linklast">11 класс</a>
+            </span>
         </div>
         <div class="links">
             <a href="{% url 'ComingSoon' %}"><p class="title">Математика</p>
             <p class="desc">Материалы для математики</p></a>
+            <span class="linkgr">
+                <a href="{% url 'Physics' %}">7 класс</a>
+                <a href="{% url 'Physics' %}">8 класс</a>
+                <a href="{% url 'Physics' %}">9 класс</a>
+                <a href="{% url 'Physics' %}">10 класс</a>
+                <a href="{% url 'Physics' %}" id="linklast">11 класс</a>
+            </span>
         </div>
     </div>
     <footer>

@@ -24,36 +24,19 @@
     <nav>
         <ul type="none">
             <li><a href="{% url 'home' %}">Главная</a></li>
-            <li><a href="../physics.html">Физика</a></li>
-            <li><a href="../chemestry.html">Химия</a></li>
-            <li><a href="../biology.html">Биология</a></li>
-            <li><a href="../math.html">Математика</a></li>
+            <li><a href="{% url 'Physics' %}">Новости</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Конкурсы</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Предложения</a></li>
+            <li><a href="{% url 'ComingSoon' %}">О нас</a></li>
         </ul>
     </nav>
     <div class="container">
         <h1>Урок 1: тема</h1>
-        <div class="container">
-            <h1>Урок 1: тема</h1>
             <div class="roadmap">
-                    <use xlink:href="#Capa_1"></use>
-                </svg>
-                <svg class="r2">
-                    <use xlink:href="#Capa_1"></use>
-                </svg>
-                <button class="b2">Button</button>
-    
-                <button onclick="" class="b1">Button</button>
-                <svg class="r1">
-                    <use xlink:href="#Capa_1"></use>
-                </svg>
-                <svg class="r2">
-                    <use xlink:href="#Capa_1"></use>
-                </svg>
-                <button class="b2">Button</button>
-    
-                <button class="b1">Button</button>
+                {% for i in buttons %}
+                    <h1>{{forloop.counter0}}</h1>
+                {% endfor %}
             </div>
-        </div>
         <footer>
             <div class="fcontent">
                 <ul type="none">

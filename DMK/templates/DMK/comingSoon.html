@@ -1,28 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Добавление элементов</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
-    <form id="form">
-        <div class="item">
-            <p>Пункт 1</p>
-            <label for="text1">Текст:</label><br>
-            <textarea id="text1" name="text1"></textarea><br>
-        </div>
-    </form>
-    <button id="add">Добавить пункт</button>
-    <button type="submit" form="form" value="Submit">Отправить</button>
-
-    <script>
-        $(document).ready(function(){
-            var i = 2;
-            $("#add").click(function(){
-                $("#form").append('<div class="item"><p>Пункт ' + i + '</p><label for="text' + i + '">Текст:</label><br><textarea id="text' + i + '" name="text' + i + '"></textarea><br></div>');
-                i++;
-            });
-        });
-    </script>
+    <nav>
+        <ul type="none">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'Physics' %}">Новости</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Конкурсы</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Предложения</a></li>
+            <li><a href="{% url 'ComingSoon' %}">О нас</a></li>
+        </ul>
+    </nav>
+    <div class="container"><h1>Coming soon</h1></div>
 </body>
 </html>

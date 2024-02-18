@@ -26,4 +26,5 @@ urlpatterns = [
     path('physics/', DMK.views.physics, name='Physics'),
     path('constructor/', DMK.views.constructor, name='Constructor'),
     path('add-item/', DMK.views.add_item, name='add_item'),
-]
+    path('physics/<int:id>/', DMK.views.physics_detail, name='physics_detail'),
+    ]
