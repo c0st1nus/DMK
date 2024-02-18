@@ -10,12 +10,10 @@ from DMK.models import Lesson, Step
 client = OpenAI(api_key='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')
 
 def home(request):
-    # lesson = Lesson.objects.create(subject="physics", description="Default description")
-    # lesson.save()
-    return render(request, 'DMK/index.html')
+    return render(request, 'DMK/home.html')
 
 def comingSoon(request):
-    return render(request, 'DMK/pl1.html')
+    return render(request, 'DMK/comingSoon.html')
 
 def physics(request):
     lessons = Lesson.objects.all()

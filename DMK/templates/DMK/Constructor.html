@@ -1,11 +1,28 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Добавление элементов</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
+    <nav>
+        <ul type="none">
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'Physics' %}">Новости</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Конкурсы</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Школьникам</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Учителям</a></li>
+            <li><a href="{% url 'ComingSoon' %}">О нас</a></li>
+        </ul>
+        <div class="progress">
+            <p class="name">Имя <strong>1 ур</strong></p>
+            <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
+        </div>
+    </nav>
     <form id="form">
         <div class="item">
             <label for="lesson_title">Название урока:</label><br>

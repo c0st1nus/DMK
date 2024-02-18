@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Физика</title>
+    <title>Главная</title>
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
@@ -13,9 +13,15 @@
             <li><a href="{% url 'home' %}">Главная</a></li>
             <li><a href="{% url 'Physics' %}">Новости</a></li>
             <li><a href="{% url 'ComingSoon' %}">Конкурсы</a></li>
-            <li><a href="{% url 'ComingSoon' %}">Предложения</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Школьникам</a></li>
+            <li><a href="{% url 'ComingSoon' %}">Учителям</a></li>
             <li><a href="{% url 'ComingSoon' %}">О нас</a></li>
         </ul>
+        <div class="progress">
+            <p class="name">Имя <strong>1 ур</strong></p>
+            <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
+        </div>
     </nav>
     <div class="container">
         <h1>Темы</h1>
